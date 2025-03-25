@@ -14,8 +14,9 @@ namespace ESS.Api.Controllers
         {
             _authFacade = authFacade;
         }
+
         [HttpPost]
-        public IActionResult Authenticate([FromBody] User userRequest)
+        public IActionResult Index([FromBody] User userRequest)
         {
             var user = _authFacade.Authenticate(userRequest.Username, userRequest.Password);
 
